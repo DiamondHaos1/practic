@@ -26,15 +26,15 @@ const restorantData = {
 
 function isOpen(prop) {
     let answer = '';
-    prop ? answer = 'Открыто': answer = 'Закрыто'  ;
+    prop ? answer = 'Закрыто' : answer = 'Открыто';
 
-    return answer;
+    return anwser;
 }
 
-console.log(isOpen(restorantData.openNow))
+console.log(isOpen(openNow))
 
 function isAverageLunchPriceTrue(fDish, sDish, average) {
-    if (parseInt(fDish.price) + parseInt(sDish.price) < average) {
+    if (+fDish.price.slice(0, -1) + (sDish.price) < average) {
         return 'Цена ниже средней';
     } else {
         return 'Цена выше средней';
